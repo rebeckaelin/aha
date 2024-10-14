@@ -28,4 +28,4 @@ jobs:
           path: "./dist"
       - name: Deploy to github pages
         id: deployment
-        uses: action/deploy-pages@v1
+        uses: actions/deploy-pages@v1
