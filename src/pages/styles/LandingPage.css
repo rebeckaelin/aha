@@ -25,3 +25,8 @@
   display: flex;
   justify-content: center;
 }
+
+.landing-page__text {
+  font-weight: 400;
+  font-size: 24px;
+}

@@ -1,0 +1,48 @@
+/* styles/TodoItem.css */
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.todo-item span {
+  flex-grow: 1;
+}
+
+.delete-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.completed {
+  text-align: left;
+  text-decoration: line-through;
+  color: gray;
+}
+
+.square-button {
+  width: 27px;
+  height: 27px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.square-button.checked {
+  background-color: white;
+  padding-bottom: 4px;
+  color: gray;
+  border: 2px solid gray;
+}
+
+.square-button:active {
+  background-color: #e0e0e0;
+}

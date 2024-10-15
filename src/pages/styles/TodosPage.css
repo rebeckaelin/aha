@@ -1,6 +1,9 @@
 .todo-page {
   width: 390px;
   height: 844px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .todo-page__header {
@@ -10,27 +13,39 @@
   justify-content: center;
   align-items: center;
 }
+
 .todo-page__img {
   width: 61px;
   height: 26px;
 }
 
-.todo {
+.todo-page__content {
+  flex: 1;
+  overflow-y: auto;
+}
+.todo-page__list {
+  padding: 0;
   list-style: none;
 }
 
 footer {
   display: flex;
+  background: #f8f8f8;
 }
 
 .add-new-task {
-  width: 326px;
+  flex: 1;
   color: white;
   background: rgba(34, 34, 34, 1);
   border-style: none;
   padding-left: 2rem;
-  font-size: 1rem;
+  font-size: 26px;
   letter-spacing: 2px;
+}
+
+.add-new-task::placeholder {
+  color: rgba(238, 238, 238, 1);
+  font-size: 26px;
 }
 
 .add-button {
@@ -39,10 +54,9 @@ footer {
   background: rgba(63, 192, 138, 1);
   border-style: none;
   color: white;
-  font-size: 44px;
-}
-
-.completed {
-  text-decoration: line-through;
-  color: grey;
+  font-size: 74px;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

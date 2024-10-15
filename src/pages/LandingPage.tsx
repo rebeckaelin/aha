@@ -19,7 +19,7 @@ const LandingPage = () => {
             className="landing-page__img"
             onClick={() => handleClick()}
           />
-          <p>A Todo App</p>
+          <p className="landing-page__text">A Todo App</p>
         </div>
         <div className="landing-page__footer">
           <img src={yellow} alt="smiley" />
