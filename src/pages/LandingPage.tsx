@@ -1,13 +1,30 @@
 // type Props = {}
+import "../pages/styles/LandingPage.css";
+import ahaLogo from "../assets/Aha!.svg";
+import yellow from "../assets/char.svg";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/todos");
+  };
   return (
     <>
-      <div>
-        LandingPage
-        <h1>HALLÅ?</h1>
-      </div>
-      ;
+      <section className="landing-page">
+        <div className="landing-page__logo">
+          <img
+            src={ahaLogo}
+            alt="aha-logo"
+            className="landing-page__img"
+            onClick={() => handleClick()}
+          />
+          <p>A Todo App</p>
+        </div>
+        <div className="landing-page__footer">
+          <img src={yellow} alt="smiley" />
+        </div>
+      </section>
     </>
   );
 };
