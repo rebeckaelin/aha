@@ -12,20 +12,17 @@ const todosSlice = createSlice({
     addTodo: (state, action: PayloadAction<string>) => {
       const newTodo: Todo = { text: action.payload, completed: false };
       state.push(newTodo);
-      // Spara till localStorage eer tillägg
       localStorage.setItem("todos", JSON.stringify(state));
     },
     toggleTodo: (state, action: PayloadAction<number>) => {
       const todo = state[action.payload];
       if (todo) {
         todo.completed = !todo.completed;
-        // Uppdatera localStorage efter ändring
         localStorage.setItem("todos", JSON.stringify(state));
       }
     },
     deleteTodo: (state, action: PayloadAction<number>) => {
-      state = state.filter((_, i) => i !== action.payload);
-      // Uppdatera localStorage efter borttagning
+      state.splice(action.payload, 1);
       localStorage.setItem("todos", JSON.stringify(state));
     },
   },
