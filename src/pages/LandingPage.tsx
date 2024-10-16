@@ -3,8 +3,9 @@ import "../pages/styles/LandingPage.css";
 import ahaLogo from "../assets/Aha!.svg";
 import yellow from "../assets/char.svg";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
-const LandingPage = () => {
+const LandingPage: React.FC = () => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/todos");

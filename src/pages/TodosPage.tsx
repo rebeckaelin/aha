@@ -1,7 +1,7 @@
 import "./styles/TodosPage.css";
 import ahaLogo from "../assets/Aha!.svg";
 import TodoItem from "../components/TodoItem";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import {
@@ -10,7 +10,7 @@ import {
   handleDelete,
 } from "../handlers/todoHandlers";
 
-const TodosPage = () => {
+const TodosPage: React.FC = () => {
   const [newTodo, setNewTodo] = useState("");
   const dispatch = useDispatch();
   const todos = useSelector((state: RootState) => state.todos);
