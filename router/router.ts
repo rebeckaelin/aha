@@ -14,7 +14,7 @@ const router = createBrowserRouter(
       element: React.createElement(TodosPage),
     },
   ],
-  { basename: "/aha" }
+  { basename: process.env.NODE_ENV === "production" ? "/aha" : "/" }
 );
 
 export default router;
