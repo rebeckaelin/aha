@@ -24,9 +24,8 @@ const todosSlice = createSlice({
       }
     },
     deleteTodo: (state, action: PayloadAction<number>) => {
-      state = state.filter((_, i) => i !== action.payload);
-      // Uppdatera localStorage efter borttagning
-      // localStorage.setItem("todos", JSON.stringify(state));
+      state.splice(action.payload, 1);
+      localStorage.setItem("todos", JSON.stringify(state));
     },
   },
 });
